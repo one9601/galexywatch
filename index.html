@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boot Strap</title>
+
+    <!-- Boot Strap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid menu">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">갤럭시워치</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#section02">특장점</a></li>
+                    <li><a href="#">스펙</a></li>
+                    <li><a href="#">고객지원</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="section01">
+        <div class="container-fluid">
+            <div class="row padding-0">
+                <div class="col-sm-12 section01-article-box">
+                    <div class="section01-article">
+                        <p class="font-size-18 myriad-pro">Watch, The Galaxy Watch</p>
+                        <p class="font-size-50">당신이 찾던 진짜 스마트 워치<br>
+                            <span class="bold">Galexy</span>에서 완성하다.</p>
+                        <button type="button" class="btn btn-primary">
+                            <p class="gray-color font-size-18">자세히 보기</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section01 -->
+
+    <section id="section02">
+        <div class="container">
+            <div class="row padding-0">
+                <div class="col-md-6 content-img sec02-content" data-aos="fade-right" data-aos-duration="3000">
+                    <img src="images/section02-bg1.png" alt="image">
+                    <div class="sec02-textbox">
+                        <p class="font-size-18">SM-R850NZDAKOO</p>
+                        <p class="font-size-20">스테인리스 바디와 프리미엄 가죽스트랩
+                        리얼 워치의 감성을 담은 디자인</p>
+                        <p class="myriad-pro">view more</p>
+                    </div>
+                </div>
+                <div class="col-md-6 content-img sec02-content" data-aos="fade-left" data-aos-duration="3000">
+                    <img src="images/section02-bg2.png" alt="image">
+                    <div class="sec02-textbox">
+                        <p class="font-size-18">CRYSTAL LAKE 워치</p>
+                        <p class="font-size-20">스와로브스키만의 예술성과 품질로 완성시킨 유니크한 워치입니다. </p>
+                        <p class="myriad-pro">view more</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section02 -->
+    <section id="section03">
+        <div class="container">
+            <div class="row padding-0">
+                <div class="col-md-8">
+                    <div class="ba-slider">
+                        <img src="images/sec03-bg1.jpg" alt="">       
+                        <div class="resize">
+                          <img src="images/sec03-bg2.jpg" alt="">
+                        </div>
+                        <span class="handle"></span>
+                      </div>
+                </div>
+                <div class="col-md-4 sec03-article">
+                    <h1>데일리 브리핑</h1>
+                    <p>하루의 시작과 끝을 함께 합니다.매일 아침 날씨, 스케쥴, 리마인더 등 필요한 정보를 알려주며, 자기 전에는 완료되지 못한 리마인더와 그 날의 활동량을 알려줍니다.</p>
+                    <p>비가 와도, 충격을 받아도 걱정할 필요 없습니다.
+                        갤럭시 워치는 5 ATM* 방수 성능과 Military 표준* 내구성을 갖춰 극한 상황에서도 문제없습니다.
+                        
+                        </p>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+  $('.ba-slider').each(function(){
+    var cur = $(this);
+    // Adjust the slider
+    var width = cur.width()+'px';
+    cur.find('.resize img').css('width', width);
+    // Bind dragging events
+    drags(cur.find('.handle'), cur.find('.resize'), cur);
+  });
+});
+
+// Update sliders on resize. 
+// Because we all do this: i.imgur.com/YkbaV.gif
+$(window).resize(function(){
+  $('.ba-slider').each(function(){
+    var cur = $(this);
+    var width = cur.width()+'px';
+    cur.find('.resize img').css('width', width);
+  });
+});
+
+function drags(dragElement, resizeElement, container) {
+	
+  // Initialize the dragging event on mousedown.
+  dragElement.on('mousedown touchstart', function(e) {
+    
+    dragElement.addClass('draggable');
+    resizeElement.addClass('resizable');
+    
+    // Check if it's a mouse or touch event and pass along the correct value
+    var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+    
+    // Get the initial position
+    var dragWidth = dragElement.outerWidth(),
+        posX = dragElement.offset().left + dragWidth - startX,
+        containerOffset = container.offset().left,
+        containerWidth = container.outerWidth();
+ 
+    // Set limits
+    minLeft = containerOffset + 10;
+    maxLeft = containerOffset + containerWidth - dragWidth - 10;
+    
+    // Calculate the dragging distance on mousemove.
+    dragElement.parents().on("mousemove touchmove", function(e) {
+    	
+      // Check if it's a mouse or touch event and pass along the correct value
+      var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+      
+      leftValue = moveX + posX - dragWidth;
+      
+      // Prevent going off limits
+      if ( leftValue < minLeft) {
+        leftValue = minLeft;
+      } else if (leftValue > maxLeft) {
+        leftValue = maxLeft;
+      }
+      
+      // Translate the handle's left value to masked divs width.
+      widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+			
+      // Set the new values for the slider and the handle. 
+      // Bind mouseup events to stop dragging.
+      $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+        $(this).removeClass('draggable');
+        resizeElement.removeClass('resizable');
+      });
+      $('.resizable').css('width', widthValue);
+    }).on('mouseup touchend touchcancel', function(){
+      dragElement.removeClass('draggable');
+      resizeElement.removeClass('resizable');
+    });
+    e.preventDefault();
+  }).on('mouseup touchend touchcancel', function(e){
+    dragElement.removeClass('draggable');
+    resizeElement.removeClass('resizable');
+  });
+}
+
+        </script>
+    </section>
+    <!-- section03 -->
+    <section id="section04">
+
+    </section>
+    <!-- section04 -->
+    <section id="section05">
+
+    </section>
+    <!-- section05 -->
+
+    <!-- aos script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+        initComparisons();
+    </script>
+</body>
+</html>
