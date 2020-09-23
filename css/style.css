@@ -2,7 +2,9 @@
 @font-face { font-family: 'NanumBarunGothic';
     src: url('/fonts/NanumBarunGothic.eot');
     src: url('/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
-    url('/fonts/NanumBarunGothic.woff') format('woff');}
+    url('/fonts/NanumBarunGothic.woff') format('woff');
+}
+
     
 body{
     font-family: NanumBarunGothic;
@@ -65,9 +67,13 @@ h1{
 
 /* section01 end*/
 
-#section02, #section03 , #section04 , #section05, #section06{
+#section02, #section03 , #section05, #section06{
     padding-top: 5%;
     width:100%;
+}
+#section04{
+    width: 100%;
+    padding-top: 20px;
 }
 
 .content-img>img{
@@ -166,22 +172,30 @@ h1{
 }
 
 /* section03 Compare Two Images end*/
-.sec03-article{
+.sec-article{
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 528px;
 }
-.sec03-article>h1{
+.sec-article>h1{
     font-size: 44px;
     padding: 0 15px;
 }
-.sec03-article>p{
+.sec-article>p{
     font-size: 18px;
     padding: 15px;
     line-height: 30px;
 }
+.sec03-img img{
+    width: 100%;
+    margin-top: 20px;
+}
 
+/* section03 end */
+
+
+/* section04 end */
 @media(max-width:767px){
     #section02, #section03 , #section04 , #section05, #section06{
         padding-top: 20px;
@@ -195,7 +209,7 @@ h1{
     .section01-article{
         text-align: center;
         color: #181818;
-        background: rgba(255,255,255,.2);
+        background: rgba(255,255,255,.7);
     }
     /* section01 end */
     .sec02-textbox{
@@ -206,10 +220,8 @@ h1{
         padding-bottom: 20px;
     }
     /* section02 end */
-    #section03{
-        padding-top: 20px;
-    }
-    .sec03-article{
+
+    .sec-article{
         text-align: center;
     }
     .sec03-article{
@@ -220,10 +232,37 @@ h1{
         margin-top: 20px;
     }
     /* section03 end */
+    #section03 .row:last-child{
+        display: flex;
+        flex-direction: column;
+    }
+    .sec03-img{
+        order: 1;
+    }
+    .sec03-article-2{
+        order: 2;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    /* section04 end */
 }
 @media(max-width:540px){
+    .section01-article{
+        margin-top: 50%;
+    }
+    .section01-article>.font-siz-18{
+        font-size: 16px;
+    }
+    .section01-article>.font-size-50{
+        padding: 15px 0;
+        line-height: 30px;
+        font-size: 30px;
+    }
+    /* section01 end */
     .sec02-textbox{
         left: 200px;
+        top: 50px;
     }
     .sec02-textbox>.font-size-18{
         font-size: 16px;
@@ -231,6 +270,8 @@ h1{
     .sec02-textbox>.font-size-20{
         font-size: 18px;
     }
+
+    /* sectioon02 end */
 }
 
 @media(max-width:480px){
