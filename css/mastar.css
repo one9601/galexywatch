@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
   font-family: 'LAB디지털';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
@@ -5,6 +6,8 @@
   font-style: normal;
 }
 
+=======
+>>>>>>> 310c7ceb395e4f7463b4575eef19caab2855f0e9
 .division-black{
   width:100%;
   height: 48px;
@@ -52,6 +55,10 @@
 .title-text>h1{
   font-size: 40px;
   padding: 0 0 20px 0;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 310c7ceb395e4f7463b4575eef19caab2855f0e9
 }
 .title-text>p{
   font-size: 18px;
@@ -64,6 +71,7 @@
   height: 100vh;
   overflow: hidden;
 }
+<<<<<<< HEAD
 .section01-title{
   width:100%;
   height: 100vh;
@@ -94,6 +102,15 @@
 /* section01 end */
 
 
+=======
+
+
+/* section01 end */
+
+.galaxy-img img{
+    width: 33%;
+}
+>>>>>>> 310c7ceb395e4f7463b4575eef19caab2855f0e9
 
 .section02{
     width:100%;
@@ -318,6 +335,10 @@
 .titletext-white p{
   font-size: 35px;
   line-height: 130%;
+<<<<<<< HEAD
+=======
+  font-weight: bold;
+>>>>>>> 310c7ceb395e4f7463b4575eef19caab2855f0e9
   color: white;
 }
 .function-box{
@@ -595,6 +616,10 @@ cursor: ew-resize;
 }
 .text-bg-black{
   width:320px;
+<<<<<<< HEAD
+=======
+  height: 275px;
+>>>>>>> 310c7ceb395e4f7463b4575eef19caab2855f0e9
   background: #1b1b1b;
 }
 .basic-img-1{
@@ -631,7 +656,10 @@ cursor: ew-resize;
   color: #fff;
 }
 .text-bg-white{
+<<<<<<< HEAD
   width:320px;
+=======
+>>>>>>> 310c7ceb395e4f7463b4575eef19caab2855f0e9
   background: #fff;
 }
 .text-box-black-2{
@@ -644,6 +672,7 @@ cursor: ew-resize;
 
 /* section07 end */
 
+<<<<<<< HEAD
 .footer-box img{
   width:100%;
   padding: 30px 0 100px 0;
@@ -728,4 +757,27 @@ cursor: ew-resize;
   }
 
   /* section 07 */
+=======
+.section08{
+  padding: 50px 0 100px 0;
+}
+
+.rotate-image{
+  position: relative;
+}
+.watch-img{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+img.infinite_rotating_logo{
+  animation: rotate_image 10s linear infinite;
+}
+
+@keyframes rotate_image{
+	100% {
+    	transform: rotate(360deg);
+    }
+>>>>>>> 310c7ceb395e4f7463b4575eef19caab2855f0e9
 }
