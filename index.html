@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Watch</title>
+    <meta property="og:description" content="스마트워치의 다양한 기능과 손목 시계의 감성을 모두 담은 새로운 워치의 기준, 갤럭시워치"/>
+    <meta property="og:image" content="images/meta-img.png"/>
+    <meta property="og:title" content="갤럭시워치3"/>
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="images/meta-img.png" />
+    <link rel="apple-touch-icon" href="images/appletouchicon.ico"/>
+    <!-- Boot Strap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/mastar.css">
+    <!-- reset css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- swiper.js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid menu">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">갤럭시워치</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#section01">특장점</a></li>
+                    <li><a href="#section02">스펙</a></li>
+                    <li><a href="#section03">고객지원</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="section01">
+    <div class="section01-title">
+        <div class="sec01-title-text">
+            <p class="sec01-title-18">Watch, The Galexy Watch</p>
+            <p class="sec01-title-40">당신이 찾던 진짜 스마트 워치<br> <span>Galexy</span>에서 완성하다.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- 
+==================================================
+    section 01 end
+==================================================
+ -->
+<div class="section02">
+    <div class="container">
+        <div class="row content-icon margin-0">
+            <div class="col-sm-2">
+                <div class="galaxy-icon text-center">
+                    <img src="images/section02-content1.png" alt="아이콘 이미지">
+                </div>
+                <div class="galaxy-icon-text text-center">
+                    <p>Health and Wellness</p>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="galaxy-icon text-center">
+                    <img src="images/section02-content2.png" alt="아이콘 이미지">
+                </div>
+                <div class="galaxy-icon-text text-center">
+                    <p>Battery</p>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="galaxy-icon text-center">
+                    <img src="images/section02-content3.png" alt="아이콘 이미지">
+                </div>
+                <div class="galaxy-icon-text text-center">
+                    <p>Durability</p>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="galaxy-icon text-center">
+                    <img src="images/section02-content4.png" alt="아이콘 이미지">
+                </div>
+                <div class="galaxy-icon-text text-center">
+                    <p>Design/Personalization</p>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="galaxy-icon text-center">
+                    <img src="images/section02-content5.png" alt="아이콘 이미지">
+                </div>
+                <div class="galaxy-icon-text text-center">
+                    <p>Fitness</p>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="galaxy-icon text-center">
+                    <img src="images/section02-content6.png" alt="아이콘 이미지">
+                </div>
+                <div class="galaxy-icon-text text-center">
+                    <p>Samsung Pay</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+==================================================
+    section 02 end
+==================================================
+ -->
+<div class="section03">
+    <div class="container">
+        <div class="row margin-0">
+            <div class="col-sm-12 text-center">
+                <div class="text galaxy-title-content">
+                    <p class="watch-title-size front-title">Watch, The</p>
+                    <p class="watch-title-size">
+                      <span class="word wisteria">　balance</span>
+                      <span class="word belize">　day</span>
+                      <span class="word pomegranate">　last</span>
+                      <span class="word green">　style</span>
+                      <span class="word midnight">　wrist</span>
+                    </p>
+                  </div>
+                  
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var words = document.getElementsByClassName('word');
+var wordArray = [];
+var currentWord = 0;
+
+words[currentWord].style.opacity = 1;
+for (var i = 0; i < words.length; i++) {
+  splitLetters(words[i]);
+}
+
+function changeWord() {
+  var cw = wordArray[currentWord];
+  var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+  for (var i = 0; i < cw.length; i++) {
+    animateLetterOut(cw, i);
+  }
+  
+  for (var i = 0; i < nw.length; i++) {
+    nw[i].className = 'letter behind';
+    nw[0].parentElement.style.opacity = 1;
+    animateLetterIn(nw, i);
+  }
+  
+  currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+}
+
+function animateLetterOut(cw, i) {
+  setTimeout(function() {
+		cw[i].className = 'letter out';
+  }, i*80);
+}
+
+function animateLetterIn(nw, i) {
+  setTimeout(function() {
+		nw[i].className = 'letter in';
+  }, 340+(i*80));
+}
+
+function splitLetters(word) {
+  var content = word.innerHTML;
+  word.innerHTML = '';
+  var letters = [];
+  for (var i = 0; i < content.length; i++) {
+    var letter = document.createElement('span');
+    letter.className = 'letter';
+    letter.innerHTML = content.charAt(i);
+    word.appendChild(letter);
+    letters.push(letter);
+  }
+  
+  wordArray.push(letters);
+}
+
+changeWord();
+setInterval(changeWord, 4000);
+
+
+</script>
+<!-- 
+==================================================
+    section 03 end
+==================================================
+ -->
+<div class="section04">
+    <div class="container">
+        <div class="row padding-0 sec04-slide margin-0">
+            <div class="col-md-12">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-textbox title-text">
+                            <h1>좀 더 자유롭게 길을 찾는 GPS 탑재</h1>
+                            <p>갤럭시 워치에는 GPS가 내장되어 있어 당신의 위치를 확인하고 목적지까지 가는 길을 찾아줍니다.<br>
+                                고도계와 기압계까지 제공합니다..</p>
+                        </div>
+                        <div class="slide-1 title-text"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-textbox title-text">
+                            <h1>갤럭시 워치를 위한 수많은 앱</h1>
+                            <p>이미 갤럭시 워치를 위한 수많은 전용 앱이 준비되어 있습니다.<br>
+                                필요한 앱을 찾아서 설치하고 더 스마트한 삶을 누리세요.
+                                </p>
+                        </div>
+                        <div class="slide-2"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-textbox title-text">
+                            <h1>방수와 충격에 강한 내구성</h1>
+                            <p>비가와도 걱정할 필요 없습니다.<br>갤럭시 워치는 5 ATM* 방수 성능과 Military 표준* 내구성을 갖춰 극한 상황에서도 문제없습니다.</p>
+                        </div>
+                        <div class="slide-3"></div>
+                    </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next">
+                        <img src="images/slide-next.png" alt="next이미지">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="images/slide-prev.png" alt="prev이미지">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- section04 slide script -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      autoplay: {
+            delay: 3000,
+            },
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+
+<!-- 
+==================================================
+    section 04 end
+==================================================
+ -->
+
+
+<div class="section05">
+    <div class="container">
+        <div class="black-title text-center">
+            <div class="gray-line"></div>
+            <p class="first-p">F</p>
+            <p>u</p>
+            <p>n</p>
+            <p>c</p>
+            <p>t</p>
+            <p>i</p>
+            <p>o</p>
+            <p>n</p>
+        </div>
+        <div class="function-box">
+            <div class="snip1273 function-1">
+                <img src="images/sec05-bg1.png" alt="">
+                <figcaption class="hover-text">
+                  <h3>다양한 운동 트레킹</h3>
+                  <div class="snip-line"></div>
+                  <p>39가지의 운동 종목 보유<br>
+                    운동하는 동안 심박수와 칼로리 측정 </p>
+                </figcaption>
+                <a href="javascript:void(0);"></a>
+                <div class="overlay overlay-1">
+                    <div class="shown-text">
+                        <p>Exercise</p>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+            </div>
+              <div class="snip1273 function-2">
+                <img src="images/sec05-bg2.png" alt="">
+                <figcaption class="hover-text">
+                  <h3>건강 모니터링</h3>
+                  <div class="snip-line"></div>
+                  <p>건강정보 기록 및 체크<br>
+                    스트레스 지수, 심박수와 칼로리 측정</p>
+                </figcaption>
+                <a href="javascript:void(0);"></a>
+                <div class="overlay overlay-2">
+                    <div class="shown-text">
+                        <p>Health</p>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+              </div>
+              <div class="snip1273 function-3">
+                <img src="images/sec05-bg3.png" alt="">
+                <figcaption class="hover-text">
+                  <h3>수면과 휴식 개선</h3>
+                  <div class="snip-line"></div>
+                  <p>숨쉬기 가이드 제공<br>
+                    수면 상태를 4단계로 진단</p>
+                </figcaption>
+                <a href="javascript:void(0);"></a>
+                <div class="overlay overlay-3">
+                    <div class="shown-text">
+                        <p>Rest</p>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="titletext-white text-center">
+            <p>Watch, The Galexy Watch</p>
+            <p>스마트 워치의 다양한 기능과 손목 시계의 감성을 담은<br>
+                새로운 워치의 기준, 갤럭시 워치
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+      /* Demo purposes only */
+  $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    });
+
+
+</script>
+
+<script>
+    $(".function-1").mouseover(function(){
+    $(".overlay-1").hide();
+    });
+    $(".function-1").mouseleave(function(){
+        $(".overlay-1").fadeIn(1000);
+    });
+
+    $(".function-2").mouseover(function(){
+    $(".overlay-2").hide();
+    });
+    $(".function-2").mouseleave(function(){
+        $(".overlay-2").fadeIn(1000);
+    });
+
+    $(".function-3").mouseover(function(){
+    $(".overlay-3").hide();
+    });
+    $(".function-3").mouseleave(function(){
+        $(".overlay-3").fadeIn(1000);
+    });
+</script>
+
+<!-- 
+==================================================
+    section 05 end
+==================================================
+ -->
+
+<div class="division-white">
+    <div class="container padding-0">
+        <div class="row padding-0 margin-0">
+           <p>Daily briefing</p>
+        </div>
+    </div>
+</div>
+
+<div class="section06">
+    <div class="container padding-0">
+        <div class="title-text">
+            <p>매일 아침 날씨, 스케쥴, 리마인더 등 필요한 정보를 알려주며, 자기 전에는<br>
+            완료되지 못한 리마인더와 그날의 활동량을 알려줍니다.</p>
+        </div>
+        <div class="row sec06-content padding-0 margin-0">
+            <div class="col-md-4">
+                <div class="sec06-img left-img">
+                    <img src="images/sec06-img1.png" alt="시계 이미지">
+                    <img src="images/sec06-img2.png" alt="시계 이미지">
+                </div>
+            </div>
+            <div class="col-md-8 sec06-article sec-article">
+                <div class="ba-slider sec06-img">
+                    <img src="images/sec06-bg1.jpg" alt="시계 이미지">       
+                    <div class="resize">
+                      <img src="images/sec06-bg2.jpg" alt="시계 이미지">
+                    </div>
+                    <span class="handle"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $(document).ready(function(){
+$('.ba-slider').each(function(){
+var cur = $(this);
+// Adjust the slider
+var width = cur.width()+'px';
+cur.find('.resize img').css('width', width);
+// Bind dragging events
+drags(cur.find('.handle'), cur.find('.resize'), cur);
+});
+});
+
+// Update sliders on resize. 
+// Because we all do this: i.imgur.com/YkbaV.gif
+$(window).resize(function(){
+$('.ba-slider').each(function(){
+var cur = $(this);
+var width = cur.width()+'px';
+cur.find('.resize img').css('width', width);
+});
+});
+
+function drags(dragElement, resizeElement, container) {
+
+// Initialize the dragging event on mousedown.
+dragElement.on('mousedown touchstart', function(e) {
+
+dragElement.addClass('draggable');
+resizeElement.addClass('resizable');
+
+// Check if it's a mouse or touch event and pass along the correct value
+var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+// Get the initial position
+var dragWidth = dragElement.outerWidth(),
+    posX = dragElement.offset().left + dragWidth - startX,
+    containerOffset = container.offset().left,
+    containerWidth = container.outerWidth();
+
+// Set limits
+minLeft = containerOffset + 10;
+maxLeft = containerOffset + containerWidth - dragWidth - 10;
+
+// Calculate the dragging distance on mousemove.
+dragElement.parents().on("mousemove touchmove", function(e) {
+    
+  // Check if it's a mouse or touch event and pass along the correct value
+  var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+  
+  leftValue = moveX + posX - dragWidth;
+  
+  // Prevent going off limits
+  if ( leftValue < minLeft) {
+    leftValue = minLeft;
+  } else if (leftValue > maxLeft) {
+    leftValue = maxLeft;
+  }
+  
+  // Translate the handle's left value to masked divs width.
+  widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+        
+  // Set the new values for the slider and the handle. 
+  // Bind mouseup events to stop dragging.
+  $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+    $(this).removeClass('draggable');
+    resizeElement.removeClass('resizable');
+  });
+  $('.resizable').css('width', widthValue);
+}).on('mouseup touchend touchcancel', function(){
+  dragElement.removeClass('draggable');
+  resizeElement.removeClass('resizable');
+});
+e.preventDefault();
+}).on('mouseup touchend touchcancel', function(e){
+dragElement.removeClass('draggable');
+resizeElement.removeClass('resizable');
+});
+}
+
+    </script>
+
+    <!-- 
+==================================================
+    section 06 end
+==================================================
+ -->
+
+
+<div class="section07">
+    <div class="container padding-0">
+        <div class="black-title text-center">
+            <div class="gray-line"></div>
+            <p class="first-p">T</p>
+            <p>r</p>
+            <p>a</p>
+            <p>c</p>
+            <p>k</p>
+            <p>i</p>
+            <p>n</p>
+            <p>g</p>
+        </div>
+        <div class="white-title-text sec07-title-text">
+            <h1>More tracking than ever</h1>
+            <p>Galaxy Watch는 선택한 운동을 자동과 심박수를 자동으로 감지하고 활동 전환할 때를 인식합니다.<br> 최대 39 개 이상의 운동에 대한 크레딧과 달리기를 할 때 GPS 기능을 받으세요.</p>
+        </div>
+        <div class="sec07-content-box">
+            <div class="text-bg-white sec07-content-1 text-bg">
+                <div class="text-box-white text-box">
+                    <img src="images/sec07-icon-1.png" alt="시계 아이콘" class="basic-img-1">
+                    <img src="images/sec07-icon-revers-1.png" alt="시계 아이콘" class="revers-img-1">
+                    <h2>Count</h2>
+                    <div class="black-line sec07-line"></div>
+                    <p>
+                        갤럭시워치는  모션센서로 스쿼트나
+                        런지, 오버헤드 프레스 같은 운동은
+                        모션 체크해서 자동으로 카운트가
+                        가능합니다.
+                    </p>
+                </div>
+            </div>
+            <div class="text-bg-black sec07-content-2 text-bg">
+                <div class="text-box-black text-box">
+                    <img src="images/sec07-icon-2.png" alt="BlueTooth 아이콘" class="basic-img-2">
+                    <img src="images/sec07-icon-revers-2.png" alt="BlutTooth 아이콘" class="revers-img-2">
+                    <h2>BlueTooth</h2>
+                    <div class="white-line sec07-line"></div>
+                    <p>
+                        갤럭시워치의 GPS 기능으로 간편하게
+                        달리기 운동, 걷기 운동, 자전거 타기 등
+                        을 할 때 자동 트레킹이 됩니다.
+                    </p>
+                </div>
+            </div>
+            <div class="text-bg-black text-bg-last sec07-content-3 text-bg">
+                <div class="text-box-black-2 text-box">
+                    <img src="images/sec07-icon-3.png" alt="GPS 아이콘" class="basic-img-3">
+                    <img src="images/sec07-icon-revers-3.png" alt="GPS 아이콘" class="revers-img-3">
+                    <h2>GPS</h2>
+                    <div class="white-line sec07-line"></div>
+                    <p>
+                        무선 이어폰과 연결이 가능해서 미리
+                        운동 전 자동으로 선정되어 있는 운동
+                        할 때 듣기좋은 곡들을 들어보세요.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/js.js"></script>
+
+    <!-- 
+==================================================
+    section 07 end
+==================================================
+ -->
+
+
+
+
+
+     <!-- 
+==================================================
+    section 08 end
+==================================================
+ -->
+
+ <footer>
+    <div class="footer-box">
+        <div class="container">
+            <div class="footer-text-box">
+                <p>SAMSUNG</p>
+                <p>
+                        Galexy Watch<br>
+                        Galexy Watch Active
+                </p>
+            </div>
+        </div>
+    </div>
+ </footer>
+</body>
+</html>
