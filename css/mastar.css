@@ -16,13 +16,21 @@
 
 @font-face { font-family: 'SCDream'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff'); font-weight: 900; }
 
+
+html {scroll-behavior: smooth; /* 부드러게 */}
+
+
 body{
   font-family: 'SCDream';
   font-weight:400;
 }
 
 
-
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
 
 .division-black{
   width:100%;
